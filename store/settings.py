@@ -25,16 +25,23 @@ SECRET_KEY = '_vogs!wf#d3p27hkr3*4jq+12qvot1hmbu^gr+si26$8#-rml@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+CAS_SERVER_URL = 'http://authorizator/authorizator/cas/'
+
+ALLOWED_HOSTS = ['*']
 
 ADMIN_ENABLED = False
 
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
+    'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_cas_ng',
+    'django_pdc_login',
 ]
 
 MIDDLEWARE = [
@@ -44,6 +51,14 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_cas_ng.middleware.CASMiddleware',
+]
+
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'django_cas_ng.backends.CASBackend',
 ]
 
 ROOT_URLCONF = 'store.urls'
