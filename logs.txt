@@ -5,3 +5,17 @@ October 18, 2020 - 12:50:27
 Django version 3.1.2, using settings 'store.settings'
 Starting development server at http://0.0.0.0:80/
 Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 18, 2020 - 12:52:31
+Django version 3.1.2, using settings 'store.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 18, 2020 - 12:59:38
+Django version 3.1.2, using settings 'store.settings'
+Starting development server at http://0.0.0.0:80/
+Quit the server with CONTROL-C.
