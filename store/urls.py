@@ -19,5 +19,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('store/', include('app.urls')),
-    path('store/cas/', include('django_pdc_login.urls')),
+    path('store/api/', include('rest_framework.urls'))
 ]
