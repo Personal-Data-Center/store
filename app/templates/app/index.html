@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static "css/index.css" %}">
+    <script type="module" src="{% static "js/main.js" %}"></script>
+    <title>PDC - Store</title>
+    <style>
+      @font-face {
+        font-family: 'Josefin Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('{% static 'font/Josefin-Sans.woff2' %}') format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_right_container">
+  			<a class="header_right_container_back_button" href="/"></a>
+  			<p>Store</p>
+  		</div>
+      <input class="searchBar" type="text" name="" value="" placeholder="Search">
+    </div>
+    <div class="back_overlay">
+
+    </div>
+    <div class="search_overlay">
+
+    </div>
+    <div class="service_overlay">
+      <div class="service_overlay_img_container">
+        <img class="service_overlay_service_icon"
+        src="/store/static/img/icon-not-found.png" alt="">
+        <p class="service_overlay_service_name">Whoami</p>
+      </div>
+      <div class="service_overlay_carroussel"></div>
+      <p>Description:</p>
+      <p>This service is a sample service that shows some info about
+      the request to the service it self. Its purpose is to test Traefik
+      loadbalancer.</p>
+      <button class="service_overlay_install_button" type="button" name="button">Install Service</button>
+    </div>
+    <div class="main">
+      <div class="main_flex">
+        <div class="banners">
+          <div class="banner" id="banner1"></div>
+          <div class="banner" id="banner2"></div>
+          <div class="banner" id="banner3"></div>
+        </div>
+        <p>Featured:</p>
+        <div class="featured">
+          <div class="icon_container" id="test">
+            <div class="icon" style="background-image: url(/store/static/img/icon-not-found.png)"></div>
+            <div class="icon_name" href="">Whoami</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
